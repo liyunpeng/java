@@ -1,0 +1,51 @@
+编译
+PS D:\javaworkspace\base> javac .\HelloWorld.java
+PS D:\javaworkspace\base> dir
+
+
+    目录: D:\javaworkspace\base
+
+
+Mode                LastWriteTime     Length Name
+----                -------------     ------ ----
+-a---         2020/3/19     11:34        425 HelloWorld.class
+-a---         2020/3/19     11:32        125 HelloWorld.java
+
+
+PS D:\javaworkspace\base> java HelloWorld
+Hello World
+
+-----------------------------
+问题： 
+PS D:\javaworkspace\base>  javac EmployeeTest.java
+EmployeeTest.java:5: 错误: 编码GBK的不可映射字符
+      /* 浣跨敤鏋勯?鍣ㄥ垱寤轰袱涓璞?*/
+原因：
+注释中的中文字符也算中文字符。由于使用CMD运行java程序的时候，系统默认的编码格式是gbk。而包含中文字符的代码一般是UNICODE格式，所以直接运行含有中文字符的代码就很容易出现编码错误
+
+
+解决：
+PS D:\javaworkspace\base> javac -encoding UTF-8 EmployeeTest.java
+PS D:\javaworkspace\base> java EmployeeTest
+名字:RUNOOB1
+年龄:26
+职位:高级程序员
+薪水:1000.0
+名字:RUNOOB2
+年龄:21
+职位:菜鸟程序员
+薪水:500.0
+
+另一种解决办法：
+对于使用notpad++的朋友来说，可以直接使用编辑器自带的转码功能编码转换的位置在 编码 栏，将编码转换为“使用ANSI格式编码”即可。其他编辑器也设置下编码格式
+
+-----------------------------
+PS D:\javaworkspace\base>  javac -encoding UTF-8 MultiStatTest.java
+PS D:\javaworkspace\base> java MultiStatTest
+吃鱼
+抓老鼠
+吃骨头
+看家
+吃鱼
+抓老鼠
+
