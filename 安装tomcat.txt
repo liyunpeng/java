@@ -1,0 +1,20 @@
+windows安装tomcat 7为例：
+手动安装环境变量：
+JRE_HOME:        C:\Program Files (x86)\Java\jdk1.7.0_01
+CLASS_PATH： .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar
+
+
+到tomcat bin目录下双击startup.bat，提示如下：
+先显示出环境变量：
+CATALINA_BASE，CATALINA_HOME ，CATALINA_TMPDIR 不用手动安装， 会自动安装：
+Using CATALINA_BASE:   "H:\ligang\My Documents\Downloads\apache-tomcat-7.0.59"
+Using CATALINA_HOME:   "H:\ligang\My Documents\Downloads\apache-tomcat-7.0.59"
+Using CATALINA_TMPDIR: "H:\ligang\My Documents\Downloads\apache-tomcat-7.0.59\temp"
+Using JRE_HOME:        "C:\Program Files (x86)\Java\jdk1.7.0_01"
+Using CLASSPATH:       "H:\ligang\My Documents\Downloads\apache-tomcat-7.0.59\bin\bootstrap.jar;H:\ligang\My Documents\Downloads\apache-tomcat-7.0.59\
+bin\tomcat-juli.jar"
+Press any key to continue . . .
+
+浏览器访问：
+http://127.0.0.1:8080/
+看到tomcat欢迎页面
